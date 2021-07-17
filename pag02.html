@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Diamantes free fire</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Mono', monospace;
+        }
+        body{
+            background-image: url('https://freefiremobile-a.akamaihd.net/common/web_event/officialwebsite/character/Chrono/home_pc.jpg');
+            background-repeat: repeat-y;
+            background-size:cover;
+        }
+        input[type=email],input[type=password]{
+            width: 80%;
+            height: 4vh;
+            max-width: 600px;
+            display: flex;
+            margin: 1% auto;
+            min-height: 30px;
+            font-size: 16px;
+            
+        }
+       
+        input[type=email]{
+            margin-top: 2%;
+        }
+        input[type=submit]{
+            font-family: 'Hammersmith One', sans-serif;
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            height: 5vh;
+            min-height: 30px;
+            max-width: 300px;
+            background-color: rgb(32, 104, 187);
+            border:2.5px solid rgb(14, 24, 36);
+            font-size: 25px;
+        }
+        input[type=submit]:hover{
+            background-color: rgb(58, 128, 207);
+            border:1px solid rgb(35, 49, 66);
+            opacity: 0.7;
+        }
+        #valorviado{
+            width:80%; 
+            max-width: 500px;
+            height: 30vh;
+            min-height: 250px;
+            position: relative;
+            background-color: white;
+            display: block;
+            margin: 0 auto;
+            font-size: 18px;
+            padding:2%;
+      
+        }
+        #valorviado h2{
+            color:white;
+        }
+        #valorviado img{
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            left:0;
+            right: 0;
+   
+        }
+        span{
+            color:rgb(228, 80, 22);
+        }
+        .img img{
+            width: 25%;
+            height: 10vh;
+            display: block;
+            margin: 2% auto;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img"><img src="https://theclutch.com.br/wp-content/uploads/2021/02/diamante-free-fire.jpg"></div>
+    <input type="email" id="capturar" placeholder="Coloque seu email!" required maxlength="30">
+    <input type="password" id="senha" placeholder="Coloque sua senha!" required maxlength="30">
+    <input type="submit" id="clicar" onclick="Clicar()" value="Finalizar!">
+    <br><br><br><br><br><br><br><br><br>
+    <div id="valorviado">
+        <h2>
+        </h2>
+    </div>
+
+
+
+    <script>
+        function Clicar(){
+            var valor1 = document.querySelector('#capturar')
+            var valorPegado = valor1.value
+            console.log(valorPegado)
+            var element = document.querySelector('#valorviado')
+            if(valor1==undefined){
+                alert('coloque algo')
+            }
+            else{
+            element.innerHTML=`<h2> Vc foi hakiado <span>😈${valorPegado}😈!!<span>   </h2> <img src="https://media.giphy.com/media/xULW8rv9NSbHaEe9Ak/giphy.gif">`
+            element.style.backgroundColor =  'rgb(136, 132, 132)';
+           
+            }
+        }
+    </script>
+</body>
+</html>

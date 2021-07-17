@@ -1,0 +1,60 @@
+*{
+    margin:0; 
+    padding:0;
+    font-family: 'Hammersmith One', sans-serif;
+}
+/*
+font-family: 'Roboto Mono', monospace;
+font-family: 'Hammersmith One', sans-serif;
+*/
+body{
+    background-image:linear-gradient(to right,#10DED4,#03C1FF);
+}
+html,body{
+    height: 100%;
+}
+h1{
+    text-align: center;
+    margin-top: 2%;
+    background-color: rgb(115, 185, 231);
+    width: 90%;
+    height: 7vh;
+    min-height: 40px;
+    max-width: 600px;
+    padding:0.4%;
+    font-size: 3em;
+    border-radius: 12px;
+}
+h1:hover{
+    opacity: 0.9;
+    border-radius: 20px;
+    background-color: rgb(103, 168, 211);
+   
+}
+p{
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+p a{
+    text-decoration: none;
+    color:rgb(170, 16, 16);
+    cursor: url("dedo.png"),pointer;
+}
+h2{
+    text-align: center;
+}
+.center img{
+    width: 50%;
+    height: 80vh;
+    min-height: 400px;
+    min-width: 500px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.center{
+    margin:2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
